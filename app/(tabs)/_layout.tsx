@@ -15,7 +15,7 @@ export default function TabLayout() {
         headerShown: false,
       }}>
       <Tabs.Screen
-        name="baitap1"
+        name="index"
         options={{
           title: 'Social',
           tabBarIcon: ({ color, focused }) => (
@@ -29,6 +29,15 @@ export default function TabLayout() {
           title: 'List',
           tabBarIcon: ({ color, focused }) => (
             <TabBarIcon name={focused ? 'list' : 'list-outline'} color={color} />
+          ),
+        }}
+      />
+       <Tabs.Screen
+        name="baitap3"
+        options={{
+          title: 'List',
+          tabBarIcon: ({ color, focused }) => (
+            <TabBarIcon name={focused ? 'settings' : 'settings-outline'} color={color} />
           ),
         }}
       />
