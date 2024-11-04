@@ -65,8 +65,6 @@ export default function App() {
       <Text style={styles.faq}>Frequently Asked Questions</Text>
  
       <Text style={styles.label}>Comments</Text>
-
-      {/* Use ScrollView to handle large lists */}
       <ScrollView>
         {feedbackList.map((item, index) => (
           <Text key={index} style={styles.commentText}>{item}</Text>
