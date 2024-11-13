@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { View, Text, Switch, TextInput, Button, StyleSheet, ScrollView } from 'react-native';
 import { StatusBar } from 'expo-status-bar';
-
+import Navbar from '@/components/baitapComponent/navbar';
 export default function App() {
   const [darkMode, setDarkMode] = useState(false);
   const [notificationsEnabled, setNotificationsEnabled] = useState(true);
@@ -33,6 +33,7 @@ export default function App() {
 
   return (
     <View style={styles.container}>
+      <Navbar/>
       <StatusBar style={darkMode ? 'light' : 'dark'} />
       <View style={styles.header}>
         <Text style={styles.logoText}>React Native App</Text>

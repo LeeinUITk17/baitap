@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import List from '@/components/baitapComponent/listbox';
 import { ThemedText } from '@/components/ThemedText';
 import { Ionicons } from '@expo/vector-icons';
+import Navbar from '@/components/baitapComponent/navbar';
 const Index = () => {
   const [selectedItems, setSelectedItems] = useState<number[]>([]);
 
@@ -28,6 +29,7 @@ const Index = () => {
 
   return (
     <ScrollView style={styles.container}>
+      <Navbar/>
        <ThemedText style={styles.listTitle}><Ionicons name="barbell-outline" color={"black"} size={20} /> Muscle</ThemedText>
       <List data={data1} selectedItems={selectedItems} onSelect={handleSelect} />
       <ThemedText style={styles.listTitle}><Ionicons name="restaurant-outline" color={"black"} size={20} /> Food</ThemedText>

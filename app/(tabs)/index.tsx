@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { StyleSheet, ScrollView, Text } from 'react-native';
 import Post from '@/components/baitapComponent/post';
-
+import Navbar from '@/components/baitapComponent/navbar';
 const Index = () => {
   const [like, setLike] = useState(false);
 const [comment, setComment] = useState(false);
@@ -72,6 +72,7 @@ const [share, setShare] = useState(false);
 
   return (
     <ScrollView style={styles.container}>
+      <Navbar />
       <Text style={styles.title}>Social Media Feed</Text>
       {posts.map(post => (
        <Post key={post.id} data={post} 
